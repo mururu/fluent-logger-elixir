@@ -1,0 +1,2 @@
+defmodule FluentLogger do
+end
