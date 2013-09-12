@@ -4,7 +4,7 @@ defmodule FluentLogger.Mixfile do
   def project do
     [ app: :fluent_logger,
       version: "0.0.1",
-      elixir: "~> 0.10.1-dev",
+      elixir: "~> 0.10.3-dev",
       deps: deps ]
   end
 
