@@ -14,8 +14,8 @@ defmodule FluentLogger.Event do
     { :ok, state(tag: tag, host: host, port: port, socket: socket) }
   end
 
-  def handle_event({ tag, data }, state() = s) do
-    content = make_content(tag, data, s)
+  def handle_event({ tag, data }, state() = s) when is_list(data) do
+    content = make_content(tag, {data}, s)
     send(content, s)
   end
 
