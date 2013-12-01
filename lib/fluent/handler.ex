@@ -21,7 +21,7 @@ defmodule Fluent.Handler do
   end
 
   defp make_content(tag, data, state(tag: top_tag)) do
-    { msec, sec, _ } = :erlang.now
+    { msec, sec, _ } = :os.timestamp
     tag = make_tag(top_tag, tag)
     content = [tag, msec * 1000000 + sec, data]
     MessagePack.pack(content)
