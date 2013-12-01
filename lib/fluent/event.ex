@@ -1,10 +1,10 @@
-defexception FluentLogger.ConnectionError, host: nil, port: nil do
+defexception Fluent.ConnectionError, host: nil, port: nil do
   def message(exception) do
     "cannot connect to #{exception.host}:#{exception.port}"
   end
 end
 
-defmodule FluentLogger.Event do
+defmodule Fluent.Event do
   use GenEvent.Behaviour
 
   defrecordp :state, [:tag, :host, :port, :socket]
