@@ -1,1 +1,1 @@
-[ "exmsgpack": {:git, "git://github.com/yrashk/exmsgpack.git", "f1b9828aade50b01d1c4b501848ccd92483048c7", []} ]
+[ "message_pack": {:git, "git://github.com/mururu/msgpack-elixir.git", "62f561f670ac00944cfba5f52edffc24a3498c34", []} ]

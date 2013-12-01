@@ -23,7 +23,7 @@ defmodule FluentLogger.Event do
     { msec, sec, _ } = :erlang.now
     tag = make_tag(top_tag, tag)
     content = [tag, msec * 1000000 + sec, data]
-    MsgPack.pack(content)
+    MessagePack.pack(content)
   end
 
   defp make_tag(top_tag, tag) do
