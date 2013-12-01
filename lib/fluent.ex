@@ -3,7 +3,7 @@ defmodule Fluent do
     host = options[:host] || "localhost"
     port = options[:port] || 24224
 
-    :gen_event.add_handler(ref, Fluent.Event, { tag, host, port })
+    :gen_event.add_handler(ref, Fluent.Handler, { tag, host, port })
   end
 
   def post(ref, tag, data) do

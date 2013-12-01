@@ -4,7 +4,7 @@ defexception Fluent.ConnectionError, host: nil, port: nil, reason: "" do
   end
 end
 
-defmodule Fluent.Event do
+defmodule Fluent.Handler do
   use GenEvent.Behaviour
 
   defrecordp :state, [:tag, :host, :port, :socket]
