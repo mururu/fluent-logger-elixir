@@ -9,8 +9,8 @@ defmodule FluentLogger.Event do
 
   defrecordp :state, [:tag, :host, :port, :socket]
 
-  def init({ tag, host, port }) do
-    { :ok, socket } = :gen_tcp.connect(String.to_char_list(host), port, [:binary, { :packet, 0 }])
+  def init({tag, host, port}) do
+    { :ok, socket } = :gen_tcp.connect(String.to_char_list!(host), port, [:binary, { :packet, 0 }])
     { :ok, state(tag: tag, host: host, port: port, socket: socket) }
   end
 
